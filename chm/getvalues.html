@@ -1,0 +1,87 @@
+<html><head><title>imputed dataset extraction</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>getvalues(mtsdi)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   getvalues">
+<param name="keyword" value=" imputed dataset extraction">
+</object>
+
+
+<h2>imputed dataset extraction</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Extract imputed dataset from a <code>mtsdi</code> object
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+getvalues(object)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+imputation object</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+If log tranformation was used, dataset is adjusted accordingly.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A vector of of rows mean with lenght <i>n</i>, where <i>n</i> is the number of observations.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Washington Leite Junger <br> <a href="mailto:wjunger@ims.uerj.br">wjunger@ims.uerj.br</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Junger, W. L. (2002) Imputação de dados faltando em séries temporais multivariadas via algoritmo EM. Monografia. IME/UERJ - Rio de Janeiro.
+</p>
+<p>
+Johnson, R., Wichern, D. (1998) Applied Multivariate Statistical Analysis. New Jersey : Prentice Hall.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="mnimput.html">mnimput</a></code>, <code><a href="getmean.html">getmean</a></code>, <code><a href="edaprep.html">edaprep</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+library(mtsdi)
+d &lt;- mkjnw()
+i &lt;- mnimput(~X1+X2+X3,d)
+getmean(i,2)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>mtsdi</em> version 0.3.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

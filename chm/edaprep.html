@@ -1,0 +1,75 @@
+<html><head><title>Dataset Preparation for Analysis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>edaprep(mtsdi)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   edaprep">
+<param name="keyword" value=" Dataset Preparation for Analysis">
+</object>
+
+
+<h2>Dataset Preparation for Analysis</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Prepare the dataset for exploratory data analysis
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+edaprep(dataset)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dataset</code></td>
+<td>
+dataset with missing observations</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+It replaces missing observation with the vector mean.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+It returns <code>dataset</code> filled in with <code>NA</code></p>
+
+<h3>Author(s)</h3>
+
+<p>
+Washington Leite Junger <a href="mailto:wjunger@ims.uerj.br">wjunger@ims.uerj.br</a> and Antonio Ponce de Leon <a href="mailto:ponce@ims.uerj.br">ponce@ims.uerj.br</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="mnimput.html">mnimput</a></code>, <code><a href="getmean.html">getmean</a></code>, <code><a href="edaprep.html">edaprep</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(miss)
+c &lt;- edaprep(miss)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>mtsdi</em> version 0.3.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

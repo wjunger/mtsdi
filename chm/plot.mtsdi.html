@@ -1,0 +1,107 @@
+<html><head><title>Plot an Imputed Matrix</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>plot.mtsdi(mtsdi)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   plot.mtsdi">
+<param name="keyword" value=" Plot an Imputed Matrix">
+</object>
+
+
+<h2>Plot an Imputed Matrix</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function produces a plot with imputed values and the estimated level for each of the columns in the imputed matrix.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'mtsdi':
+plot(x, vars = "all", overlay = TRUE, level = TRUE, 
+        points = FALSE, leg.loc = "topright", horiz = FALSE, at.once = FALSE, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+an object of the class <code>mtsdi</code></td></tr>
+<tr valign="top"><td><code>vars</code></td>
+<td>
+a vector with de variables to plot</td></tr>
+<tr valign="top"><td><code>overlay</code></td>
+<td>
+logical. If <code>TRUE</code>, observed values are plot over the imputed ones</td></tr>
+<tr valign="top"><td><code>level</code></td>
+<td>
+logical. If <code>TRUE</code>, the level is plot</td></tr>
+<tr valign="top"><td><code>points</code></td>
+<td>
+logical. If <code>TRUE</code>, points on the observed and imputed values are plot</td></tr>
+<tr valign="top"><td><code>leg.loc</code></td>
+<td>
+a list with <code>x</code> and <code>y</code> coordinates for the legend or a quoted string. Default is "topright". See Details</td></tr>
+<tr valign="top"><td><code>horiz</code></td>
+<td>
+logical. If <code>TRUE</code>, the legend will horizontal oriented</td></tr>
+<tr valign="top"><td><code>at.once</code></td>
+<td>
+logical. If <code>TRUE</code>, all the variables are plot in separate windows at once</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+further options for function <code><a onclick="findlink('graphics', 'plot.html')" style="text-decoration: underline; color: blue; cursor: hand">plot</a></code></td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+The <code>leg.loc</code> option may also be specified by setting one of the following quoted strings <code>"bottomright"</code>, <code>"bottom"</code>, <code>"bottomleft"</code>, <code>"left"</code>, <code>"topleft"</code>, <code>"top"</code>, <code>"topright"</code>, <code>"right"</code>, or <code>"center"</code>. This places the legend on the inside of the plot frame at the given location with the orietation set by <code>horiz</code>. See <code><a onclick="findlink('graphics', 'legend.html')" style="text-decoration: underline; color: blue; cursor: hand">legend</a></code> for further details.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Washington Leite Junger <a href="mailto:wjunger@ims.uerj.br">wjunger@ims.uerj.br</a> and Antonio Ponce de Leon <a href="mailto:ponce@ims.uerj.br">ponce@ims.uerj.br</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="mnimput.html">mnimput</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(miss)
+f &lt;- ~c31+c32+c33+c34+c35
+i &lt;- mnimput(f,miss,eps=1e-3,ts=TRUE, method="spline",sp.control=list(df=c(7,7,7,7,7)))
+plot(i)
+</pre>
+
+<script Language="JScript">
+function findlink(pkg, fn) {
+var Y, link;
+Y = location.href.lastIndexOf("\\") + 1;
+link = location.href.substring(0, Y);
+link = link + "../../" + pkg + "/chtml/" + pkg + ".chm::/" + fn;
+location.href = link;
+}
+</script>
+
+
+<hr><div align="center">[Package <em>mtsdi</em> version 0.3.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,30 @@
+# Export all names
+exportPattern(".")
+
+# Export only
+export(
+edaprep,
+elapsedtime,
+getmean,
+mkjnw,
+mnimput,
+mstats
+)
+
+# Registering S3 methods
+S3method(plot,mtsdi)
+S3method(predict,mtsdi)
+S3method(print,mtsdi)
+S3method(print,summary.mtsdi)
+S3method(summary,mtsdi)
+
+# Import all packages listed as Imports or Depends
+import(
+  stats,
+  gam,
+  splines
+)
+
+# Global functions and variables
+importFrom("graphics", "legend", "lines", "plot", "title")
+

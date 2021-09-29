@@ -1,0 +1,86 @@
+<html><head><title>Rows Mean Estimation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>getmean(mtsdi)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   getmean">
+<param name="keyword" value=" Rows Mean Estimation">
+</object>
+
+
+<h2>Rows Mean Estimation</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Estimate the row mean from a <code>mtsdi</code> object regarding a fixed number of imputed values
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+getmean(object, weighted=TRUE, mincol=1, maxconsec=3)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+imputation object</td></tr>
+<tr valign="top"><td><code>weighted</code></td>
+<td>
+If <code>TRUE</code>, weights returned by <code><a href="mnimput.html">mnimput</a></code> will be used form mean computation</td></tr>
+<tr valign="top"><td><code>mincol</code></td>
+<td>
+integer for the minimun number of valid values by row</td></tr>
+<tr valign="top"><td><code>maxconsec</code></td>
+<td>
+integer for the maximum number of consecutive missing values in a column</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+It is useful just in case one wants row mean estimated. If log tranformation was used, mean is adjusted accordingly.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A vector of of rows mean with lenght <i>n</i>, where <i>n</i> is the number of observations.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Washington Leite Junger <a href="mailto:wjunger@ims.uerj.br">wjunger@ims.uerj.br</a> and Antonio Ponce de Leon <a href="mailto:ponce@ims.uerj.br">ponce@ims.uerj.br</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="mnimput.html">mnimput</a></code>, <code><a href="getmean.html">getmean</a></code>, <code><a href="edaprep.html">edaprep</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(miss)
+f &lt;- ~c31+c32+c33+c34+c35
+i &lt;- mnimput(f,miss,eps=1e-3,ts=TRUE, method="spline",sp.control=list(df=c(7,7,7,7,7)))
+m &lt;- getmean(i,2)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>mtsdi</em> version 0.3.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

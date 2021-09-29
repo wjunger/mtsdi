@@ -1,0 +1,87 @@
+<html><head><title>Missing Dataset Statistics</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>mstats(mtsdi)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   mstats">
+<param name="keyword" value=" Missing Dataset Statistics">
+</object>
+
+
+<h2>Missing Dataset Statistics</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Carry out some statistics from the incomplete dataset
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+mstats(dataset)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dataset</code></td>
+<td>
+dataset with missing for description</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function computes the proportion of missing observations in a given dataset by rows and columns.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A list containing
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>rows</code></td>
+<td>
+number of missing in each row</td></tr>
+<tr valign="top"><td><code>columns</code></td>
+<td>
+number of missing in each column</td></tr>
+<tr valign="top"><td><code>pattern</code></td>
+<td>
+the pattern of the missing values</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Washington Leite Junger <a href="mailto:wjunger@ims.uerj.br">wjunger@ims.uerj.br</a> and Antonio Ponce de Leon <a href="mailto:ponce@ims.uerj.br">ponce@ims.uerj.br</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="mnimput.html">mnimput</a></code>, <code><a href="getmean.html">getmean</a></code>, <code><a href="edaprep.html">edaprep</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(miss)
+mstats(miss)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>mtsdi</em> version 0.3.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>
