@@ -1,7 +1,7 @@
 Package: mtsdi
 Version: 0.3.6
 Date: 2021-09-29
-Author: Washington Junger <wjunger@ims.uerj.br> and Antonio Ponce de Leon <ponce@ims.uerj.br>
+Author: Washington Junger <wjunger@ims.uerj.br>
 Maintainer: Washington Junger <wjunger@ims.uerj.br>
 Depends: R (>= 3.0.0),utils,stats,gam,splines
 Title: Multivariate Time Series Data Imputation
